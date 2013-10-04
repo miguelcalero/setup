@@ -1,6 +1,7 @@
 #!/bin/bash
 # Simple setup.sh for configuring Ubuntu 12.04 LTS EC2 instance
 # for headless setup. 
+sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
 
 # Install nvm: node-version manager
 # https://github.com/creationix/nvm
@@ -26,6 +27,7 @@ sudo apt-get install -y rlwrap
 sudo apt-add-repository -y ppa:cassou/emacs
 sudo apt-get -qq update
 sudo apt-get install -y emacs24-nox emacs24-el emacs24-common-non-dfsg
+sudo apt-get install smlnj
 
 # Install Heroku toolbelt
 # https://toolbelt.heroku.com/debian
